@@ -4,6 +4,13 @@ package com.thoughtworks.tw101.exercises.exercise1;
 
 public class Main {
     public static void main(String[] args) {
+        int startValue = 1;
+        int maximumValue = 100;
 
+        for (int i = startValue; i <= maximumValue; i++ ) {
+            if (i % 2 != 0) {
+                System.out.println(i);
+            }
+        }
     }
 }
