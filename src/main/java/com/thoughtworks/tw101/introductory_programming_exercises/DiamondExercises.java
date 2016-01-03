@@ -36,7 +36,12 @@ public class DiamondExercises {
 //             ***
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
-        for (int lineNumber = 0; lineNumber < n; lineNumber++) {
+        drawTriangleTop(n);
+        drawTriangleLine(n,n);
+    }
+
+    private static void drawTriangleTop(int n) {
+        for (int lineNumber = 0; lineNumber < n - 1; lineNumber++) {
             drawTriangleLine(n, lineNumber);
         }
     }
@@ -50,6 +55,10 @@ public class DiamondExercises {
 //              *
     private static void drawADiamond(int n) {
         drawAnIsoscelesTriangle(n);
+        drawDiamondBottom(n);
+    }
+
+    private static void drawDiamondBottom(int n) {
         for (int lineNumber = n + 1; lineNumber < n * 2; lineNumber++) {
             drawTriangleLine(n, lineNumber);
         }
@@ -64,6 +73,8 @@ public class DiamondExercises {
 //            ***
 //             *
     private static void drawADiamondWithYourName(int n) {
-
+        drawTriangleTop(n);
+        System.out.println("Aidan");
+        drawDiamondBottom(n);
     }
 }
