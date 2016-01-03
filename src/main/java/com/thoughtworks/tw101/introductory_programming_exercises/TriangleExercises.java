@@ -12,7 +12,7 @@ public class TriangleExercises {
 //    Print one asterisk to the console.
 //    Example: *
     private static void drawAnAsterisk() {
-
+        System.out.println("*");
     }
 
 //    Draw a horizontal line
