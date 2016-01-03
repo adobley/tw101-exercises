@@ -7,6 +7,29 @@ public class DiamondExercises {
         drawADiamondWithYourName(3);
     }
 
+
+    private static void drawTriangleLine(int height, int lineNumber) {
+        int offset;
+        int charCount;
+
+        if (lineNumber < height) {
+            offset = height - lineNumber - 1;
+            charCount = (2 * lineNumber) + 1;
+        } else {
+            offset = lineNumber - height;
+            charCount = (2 * (height - (lineNumber - height + 1))) + 1;
+        }
+
+        while (offset > 0) {
+            System.out.print(" ");
+            offset--;
+        }
+        while (charCount > 0) {
+            System.out.print("*");
+            charCount--;
+        }
+        System.out.println();
+    }
 //    Isosceles Triangle
 //    Given a number n, print a centered triangle. Example for n=3:
 //              *
@@ -14,18 +37,7 @@ public class DiamondExercises {
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
         for (int lineNumber = 0; lineNumber < n; lineNumber++) {
-            int offset = n - lineNumber - 1;
-            int charCount = (2 * lineNumber) + 1;
-
-            while (offset > 0) {
-                System.out.print(" ");
-                offset--;
-            }
-            while (charCount > 0) {
-                System.out.print("*");
-                charCount--;
-            }
-            System.out.println();
+            drawTriangleLine(n, lineNumber);
         }
     }
 
@@ -37,7 +49,10 @@ public class DiamondExercises {
 //             ***
 //              *
     private static void drawADiamond(int n) {
-        
+        drawAnIsoscelesTriangle(n);
+        for (int lineNumber = n + 1; lineNumber < n * 2; lineNumber++) {
+            drawTriangleLine(n, lineNumber);
+        }
     }
 
 //    Diamond with Name
