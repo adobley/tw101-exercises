@@ -44,6 +44,11 @@ public class TriangleExercises {
 //            **
 //            ***
     private static void drawARightTriangle(int n) {
-
+        for (int y = 0; y < n; y++) {
+            for (int x = 0; x < y + 1; x++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
