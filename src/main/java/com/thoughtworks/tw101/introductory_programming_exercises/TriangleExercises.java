@@ -32,6 +32,9 @@ public class TriangleExercises {
 //            *
 //            *
     private static void drawAVerticalLine(int n) {
+        for (int i = 0; i < n; i++) {
+            drawAnAsterisk();
+        }
     }
 
 //    Draw a right triangle
