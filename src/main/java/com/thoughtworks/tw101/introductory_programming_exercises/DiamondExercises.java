@@ -13,7 +13,20 @@ public class DiamondExercises {
 //             ***
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
+        for (int lineNumber = 0; lineNumber < n; lineNumber++) {
+            int offset = n - lineNumber - 1;
+            int charCount = (2 * lineNumber) + 1;
 
+            while (offset > 0) {
+                System.out.print(" ");
+                offset--;
+            }
+            while (charCount > 0) {
+                System.out.print("*");
+                charCount--;
+            }
+            System.out.println();
+        }
     }
 
 //    Diamond
@@ -24,7 +37,7 @@ public class DiamondExercises {
 //             ***
 //              *
     private static void drawADiamond(int n) {
-
+        
     }
 
 //    Diamond with Name
